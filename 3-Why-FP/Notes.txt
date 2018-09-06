@@ -93,6 +93,134 @@ OO patterns
 
 
 
+in Java-8 : Functional Programming
+-----------------------------------
+
+
+
+		//---------------------------------------------------------
+		//way-1
+
+		class ByAmountCondition implements Predicate<Txn> {
+			@Override
+			public boolean test(Txn t) {
+				return t.getAmount() == amount;
+			}
+		}
+		Predicate<Txn> byAmountCondition=new ByAmountCondition();
+		//---------------------------------------------------------
+		
+		
+		//way-2 
+		Predicate<Txn> byAmountCondition = new Predicate<Txn>() {
+			@Override
+			public boolean test(Txn t) {
+				return t.getAmount() == amount;
+			}
+		};
+		//---------------------------------------------------------
+		
+		
+		
+		//  in java-8 
+		
+		
+		Predicate<Txn> byAmountCondition=public boolean test(Txn t) {
+											return t.getAmount() == amount;
+										}
+										
+		|
+		|
+		|
+		|
+		V
+		
+		Predicate<Txn> byAmountCondition=boolean test(Txn t) {
+											return t.getAmount() == amount;
+										}										
+		
+
+		|
+		|
+		|
+		|
+		V
+
+		Predicate<Txn> byAmountCondition=test(Txn t) {
+											return t.getAmount() == amount;
+										}	
+
+
+		
+		|
+		|
+		|
+		|
+		V
+
+		Predicate<Txn> byAmountCondition=(Txn t) {
+											return t.getAmount() == amount;
+										}	
+
+		
+    	
+		|
+		|
+		|
+		|
+		V 	   	
+ 	   
+ 	   Predicate<Txn> byAmountCondition=(t) {
+											return t.getAmount() == amount;
+										}	
+										
+ 	   
+		|
+		|
+		|
+		|
+		V 	  
+ 	   
+ 	     Predicate<Txn> byAmountCondition=(t) -> t.getAmount() == amount;
+											
+ 	   
+		|
+		|
+		|
+		|
+		V 	  
+ 	   
+ 	   Predicate<Txn> byAmountCondition=t -> t.getAmount() == amount;  // function in java   ( Lambda Expression )
+ 	   
+ 	   
+ 	   
+ 	-----------------------------------------------------------------
+ 	
+ 	
+ 	why FP in java ?
+ 	
+ 	
+ 	
+ 	reason-1 : clean & consise code
+ 	
+ 	
+ 				i.e we can separate 'what' & 'how' logic
+ 				
+    ------------------------------------------------------------------				
+ 				
+ 	
+ 	
+ 	
+ 	
+ 	
+
+
+
+
+
+
+
+
 
 
 

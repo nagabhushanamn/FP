@@ -3,9 +3,11 @@ package com.bank.service;
 import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.function.Predicate;
 
 import com.bank.model.Txn;
 import com.bank.model.TxnType;
+import com.bank.service.lib.TxnUtilLib;
 
 public class TxnServiceImpl implements TxnService {
 
@@ -33,17 +35,41 @@ public class TxnServiceImpl implements TxnService {
 				break;
 		}
 		return result;
+
 	}
 
 	@Override
 	public List<Txn> getTxns(double amount) {
-		// imperative style coding( what + how )
-		List<Txn> result = new ArrayList<>();
-		for (Txn txn : txns) {
-			if (txn.getAmount() == amount)
-				result.add(txn);
-		}
-		return result;
+		// ----------------------------------------------------
+		// way-1: imperative style coding( what + how )
+		// ----------------------------------------------------
+
+//		List<Txn> result = new ArrayList<>();
+//		for (Txn txn : txns) {
+//			if (txn.getAmount() == amount)
+//				result.add(txn);
+//		}
+//		return result;
+
+		// ----------------------------------------------------
+		// way-2 : declarative style coding
+		// ----------------------------------------------------
+
+//		class ByAmountCondition implements Predicate<Txn> {
+//			@Override
+//			public boolean test(Txn t) {
+//				return t.getAmount() == amount;
+//			}
+//		}
+//		return TxnUtilLib.filter(txns, new ByAmountCondition());
+
+		// ----------------------------------------------------
+		// way-3: declarative style coding with function ==> functional programming
+		// ----------------------------------------------------
+
+		Predicate<Txn> byAmount = t -> t.getAmount() == amount;
+		return TxnUtilLib.filter(txns, byAmount);
+
 	}
 
 	@Override
