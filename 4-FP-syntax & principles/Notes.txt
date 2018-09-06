@@ -1,0 +1,217 @@
+
+----------------------------------------------------	
+How to create function in java-language ?
+----------------------------------------------------	
+
+  ==> using lambda-expression
+  
+  
+lambda Expression syntax:
+
+    parameters  -> body    
+
+    parameters  
+
+        (int a,int b)
+        (a,b)
+        (a)
+        ()
+        a
+
+    body 
+
+        {block}
+        expression
+	 
+----------------------------------------------------	
+
+Type of Lambda-expression in java :
+
+	=> functional-interface  i.e any interface with single-abstract-method ( sam )
+	
+-------------------------------------------------------------------------------------
+New Functional Interfaces
+-------------------------------------------------------------------------------------
+What functional interfaces were added to Java 8?
+	
+	- Java 8 features a new package with more than 40 functional interface
+	- New functional interfaces cover all common function types
+	- Special versions of such interfaces are devoted to primitive types
+
+-------------------------------------------------------------------------------------
+
+	A wealth of FIs
+	
+		- A package java.util.function;
+		- Over forty FIs
+		- All common types of functions, ready to use
+		
+		
+		Functional Interfaces, by Function Type
+
+		
+		nothing->T            Supplier
+		T->nothing            Consumer
+		T->T                  UnaryOperator
+		T,T->T                BinaryOperator
+		S->T                  Function
+		T->boolean            Predicate  
+
+
+	
+---------------------------------------------------------------------------------------
+ Functional Interfaces for Primitive Types	
+---------------------------------------------------------------------------------------
+Are there functional interfaces whose arguments and return types are primitive types?
+	
+	- Most functional interfaces have variants for primitive types
+	- Primitive types int, long, and double are supported
+	- Primitive functional interfaces avoid the overhead of wrapper classes
+
+---------------------------------------------------------------------------------------
+
+Functional Interfaces of Primitive Types
+
+	- FI whose arguments and return types are primitive types
+	
+	
+	FI Name       Variants with X=Int,Long,Double         FunctionType
+	
+	
+	Supplier         XSupplier                             noting->X
+	Consumer         XConsumer                             X->nothing
+	UnaryOperator    XUnaryOperator                        X->X
+	BinaryOperator   XBinaryOperator                       X,X->X
+	Predicate        XPredicate                            X->boolean
+
+---------------------------------------------------------------------------------------
+
+Variants of Function
+	
+	One primitive type : ToXFunction<T>          ( type:T ->X )
+	
+		- ToIntFunction<T>, etc.
+	
+	Two primitive types : XToYFunction<T>        ( type:X ->Y )
+	
+		-IntToLongFunction,IntToDoubleFunction, and so on
+	
+	No IntToIntFunctiom, why
+	
+		There's IntUnaryOperator
+
+
+---------------------------------------------------------------------------------------
+
+
+ FP Principles
+ ----------------
+ 
+ 
+   - A function can be stored in a variable or value
+   - A parameter of a function can be a function
+   - The return value of a function can be a function
+   
+   
+   
+A higher order function
+
+        - A function whose return value is a function
+        - A function with a parameter that is a function
+   
+
+
+
+---------------------------------------------------------------------------------------
+3.4 - Composing Functions
+---------------------------------------------------------------------------------------			
+	
+	- Several functional interfaces support composition via default methods
+	- 'Function' and Consumer support sequential composition
+	- Predicate supports boolean composition	
+---------------------------------------------------------------------------------------			
+
+	
+Some FIs provide Composition Methods
+	
+	
+	- create complex functions from simpler
+	- Predicate, Consumer, Function and Comparator	
+	
+		
+---------------------------------------------------------------------------------------		
+
+Composing Predicates
+	
+	The usual 3 boolean connectives: and,or,not
+	
+	Predicate<T> a=...,b=...;
+	Predicate<T> c=a.and(b),
+	             d=a.or(b),
+	             e=a.negate();
+	             
+---------------------------------------------------------------------------------------	
+
+why FP ?
+
+	reason-1 : for clean & concise code
+	reason-2 : by composing smaller functions, we can create complex algorithm  ( Higer order programming )
+	reason-3 : for lazy evaluation  , defer some actions untill they really required
+	reason-4 : promotes immutability i.e functions are stateless i.e same-input  always gives same-output
+---------------------------------------------------------------------------------------	
+	
+	
+-------------------------------------------------------------------------------------
+ 2.3 - Capturing Values
+-------------------------------------------------------------------------------------
+
+what Lambda-expression can access from outside scope ?
+
+
+		- Lambda expressions can access
+				=> static fields of enclosing class
+				=> instance fields of enclosing object
+
+		- How - They store a reference to the enclosing object
+
+		
+		- Effectively Final Variables
+	
+			- A variable that is used as if it was final
+			- No reassigned
+			
+				Note: it is good practice to declare them final
+			
+	
+		
+		- Capturing Local Variables
+		
+		- LE can access local variables of the enclosing method provided
+		  they are effectively final
+		
+		How?
+		
+			=> They store a copy of their value ( same rule as anonymous class )
+	
+
+
+-------------------------------------------------------------------------------------
+ 
+ LE vs Anonymous-Class
+ 
+-------------------------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ 

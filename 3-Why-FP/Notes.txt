@@ -200,13 +200,18 @@ in Java-8 : Functional Programming
  	why FP in java ?
  	
  	
- 	
  	reason-1 : clean & consise code
  	
- 	
  				i.e we can separate 'what' & 'how' logic
+ 	           
+	reason-2 : by composing smaller functions, we can create complex algorithm  ( Higer order programming )
+	reason-3 : by lazy evaluation  , defer some actions until they really required
+			   can improve appln performance	
+	reason-4 : by promoting immutability i.e with stateless i.e with same-input  always gives same-output ,
+	           good for parallel programming
+---------------------------------------------------------------------------------------	
+					
  				
-    ------------------------------------------------------------------				
  				
  	
  	
