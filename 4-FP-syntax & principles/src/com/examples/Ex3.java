@@ -16,7 +16,9 @@ import java.util.function.ToIntFunction;
  *
  *
  * 
- *         - java.util.function.*  ==> for standard functional interfaces
+ *         - java.util.function.* 
+ *         
+ *          	==> for standard functional-interfaces
  * 
  * 
  *

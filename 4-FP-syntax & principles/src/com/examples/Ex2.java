@@ -51,7 +51,7 @@ class Lib {
  * 
  * @author nag-training
  *
- * Type of Lambda Expression  in java  is 'Functional Interface'
+ * Type of Lambda-Expression in java  is 'Functional Interface'
  *
  */
 

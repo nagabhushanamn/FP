@@ -123,46 +123,23 @@ A higher order function
 
 
 ---------------------------------------------------------------------------------------
-3.4 - Composing Functions
+Composing Functions
 ---------------------------------------------------------------------------------------			
 	
 	- Several functional interfaces support composition via default methods
 	- 'Function' and Consumer support sequential composition
 	- Predicate supports boolean composition	
----------------------------------------------------------------------------------------			
 
-	
-Some FIs provide Composition Methods
-	
-	
-	- create complex functions from simpler
-	- Predicate, Consumer, Function and Comparator	
-	
 		
----------------------------------------------------------------------------------------		
-
-Composing Predicates
-	
-	The usual 3 boolean connectives: and,or,not
-	
-	Predicate<T> a=...,b=...;
-	Predicate<T> c=a.and(b),
-	             d=a.or(b),
-	             e=a.negate();
-	             
----------------------------------------------------------------------------------------	
-
-why FP ?
-
-	reason-1 : for clean & concise code
-	reason-2 : by composing smaller functions, we can create complex algorithm  ( Higer order programming )
-	reason-3 : for lazy evaluation  , defer some actions untill they really required
-	reason-4 : promotes immutability i.e functions are stateless i.e same-input  always gives same-output
----------------------------------------------------------------------------------------	
+	Some FIs provide Composition Methods
+		
+		
+		- create complex functions from simpler
+		
 	
 	
 -------------------------------------------------------------------------------------
- 2.3 - Capturing Values
+ Capturing Values
 -------------------------------------------------------------------------------------
 
 what Lambda-expression can access from outside scope ?
@@ -171,29 +148,11 @@ what Lambda-expression can access from outside scope ?
 		- Lambda expressions can access
 				=> static fields of enclosing class
 				=> instance fields of enclosing object
-
-		- How - They store a reference to the enclosing object
-
-		
-		- Effectively Final Variables
+				=> Effectively final Local Variables
 	
-			- A variable that is used as if it was final
-			- No reassigned
-			
-				Note: it is good practice to declare them final
-			
-	
-		
-		- Capturing Local Variables
-		
-		- LE can access local variables of the enclosing method provided
-		  they are effectively final
-		
-		How?
-		
-			=> They store a copy of their value ( same rule as anonymous class )
-	
-
+					- A variable that is used as if it was final
+					- No reassigned
+					
 
 -------------------------------------------------------------------------------------
  
@@ -204,6 +163,17 @@ what Lambda-expression can access from outside scope ?
 
 
 
+         
+---------------------------------------------------------------------------------------	
+
+why FP ?
+
+	reason-1 : for clean & concise code
+	reason-2 : by composing smaller functions, we can create complex algorithm  ( Higer order programming )
+	reason-3 : for lazy evaluation  , defer some actions until they really required
+	reason-4 : promotes immutability i.e functions are stateless i.e same-input  always gives same-output
+---------------------------------------------------------------------------------------	
+	
 
 
 
