@@ -11,13 +11,14 @@ interface Joiner {
 class Lib {
 
 	public static double getAdd(Adder adder) {
-		// from any input source like
+		// from any input source
 		double n1 = 12;
 		double n2 = 13;
 
 		return adder.add(n1, n2);
 
 	}
+
 //
 	public static String getJoin(Joiner joiner) {
 		// from any input source
@@ -29,7 +30,7 @@ class Lib {
 	}
 
 	public static double get(Adder adder) {
-		//  data from any input source
+		// data from any input source
 		double n1 = 12;
 		double n2 = 13;
 
@@ -51,7 +52,7 @@ class Lib {
  * 
  * @author nag-training
  *
- * Type of Lambda-Expression in java  is 'Functional Interface'
+ *         Type of Lambda-Expression in java is 'Functional Interface'
  *
  */
 
