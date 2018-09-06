@@ -11,40 +11,31 @@ interface Joiner {
 class Lib {
 
 	public static double getAdd(Adder adder) {
-		// from any input source
 		double n1 = 12;
 		double n2 = 13;
-
 		return adder.add(n1, n2);
-
 	}
 
-//
 	public static String getJoin(Joiner joiner) {
-		// from any input source
 		String s1 = "Hello";
 		String s2 = "World";
-
 		return joiner.join(s1, s2);
-
 	}
+
+	//
 
 	public static double get(Adder adder) {
 		// data from any input source
 		double n1 = 12;
 		double n2 = 13;
-
 		return adder.add(n1, n2);
-
 	}
 
 	public static String get(Joiner joiner) {
 		// data from any input source
 		String s1 = "Hello";
 		String s2 = "World";
-
 		return joiner.join(s1, s2);
-
 	}
 }
 

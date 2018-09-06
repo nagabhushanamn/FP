@@ -42,11 +42,7 @@ public class Ex3 {
 		list.add("boy");
 		list.add("boy");
 		list.add("girl");
-		list.add("boy");
-		list.add("girl");
-		list.add("boy");
-		list.add("girl");
-		list.add("girl");
+		
 
 		list.replaceAll(p -> p.equals("girl") ? "new-boy" : p);
 		System.out.println(list);
@@ -62,7 +58,7 @@ public class Ex3 {
 		BinaryOperator<Integer> sum1 = (n1, n2) -> n1 + n2;
 		int r = sum.apply(12, 13);
 
-		// or ( better version )
+		// or ( better version using primitive version FI )
 
 		IntBinaryOperator sum2= (n1, n2) -> n1 + n2;
 		int r1 = sum2.applyAsInt(12, 13);
