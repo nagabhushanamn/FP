@@ -1,0 +1,67 @@
+
+
+
+ problems with external-iterations
+ 
+ 
+ 	=> by default, sequential
+ 	=> imperative style 
+ 	=> many mutable variables
+ 	=> hard to parallelize..
+ 	
+ 	.....
+ 	
+-------------------------------------------------- 	
+
+
+Stream Interface
+
+	- Interface java.util.Stream<T>
+		
+		=> 30+ instance methods
+		=> 7 static methods	
+	
+
+
+Type of Operations
+
+	- Build ops  => creates stream from  data source
+	- Intermediate ops => Convert one stream to other
+	- Terminal ops => Convert stream into something else or nothing
+	
+
+
+
+A Pipeline of Stream Operations
+
+
+	Build-operation ===> intermediate op ==> intermediate op ==> ... ==> terminal-operation  ==> result
+		
+
+
+-----------------------------------------------------
+
+
+
+// Q
+
+
+	Print the names of the employees with salary at least 2500$,
+	alphabetically sorted
+	
+	
+	Employee[] emps={ /* put employees here */ };
+	
+	Arrays.stream(emps)                    // build
+	      .filter(e->e.getSalaray()>=2500) // intermediate
+	      .map(Employee::getName)          // intermediate
+	      .sorted()                        // intermdiate 
+	      .forEach(System.out::println);   // terminal
+	      
+---------------------------------------------------------      
+	
+	
+
+
+	
+		
