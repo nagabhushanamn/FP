@@ -178,6 +178,55 @@ why FP ?
 	
 
 
+-------------------------------------------------------------------------------------	
+2.4- Method References
+-------------------------------------------------------------------------------------	
+
+What are method references? What are method references useful for?
+
+	- A method reference is an expression denoting a method
+	- Method references can be used in place of lambda expressions
+	- Method references bridge existing methods with functional interfaces
+
+-------------------------------------------------------------------------------------	
+
+
+Method References
+
+	- Function Pointers Come to Java
+    - A MR is an expression denoting a method
+    - Similar to function Pointers in C/C++
+    - More efficient than reflection ( That is Method class )
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
