@@ -29,6 +29,8 @@ Type of Lambda-expression in java :
 
 	=> functional-interface  i.e any interface with single-abstract-method ( sam )
 	
+	
+	
 -------------------------------------------------------------------------------------
 New Functional Interfaces
 -------------------------------------------------------------------------------------
@@ -162,16 +164,16 @@ what Lambda-expression can access from outside scope ?
 
 
 
-
          
 ---------------------------------------------------------------------------------------	
 
 why FP ?
 
 	reason-1 : for clean & concise code
-	reason-2 : by composing smaller functions, we can create complex algorithm  ( Higer order programming )
+	reason-2 : by composing smaller functions, we can create complex algorithm  ( Higher order programming )
 	reason-3 : for lazy evaluation  , defer some actions until they really required
-	reason-4 : promotes immutability i.e functions are stateless i.e same-input  always gives same-output
+	reason-4 : it promotes immutability i.e functions are stateless i.e same-input  always gives same-output
+
 ---------------------------------------------------------------------------------------	
 	
 

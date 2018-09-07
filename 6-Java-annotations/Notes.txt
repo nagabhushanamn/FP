@@ -1,0 +1,68 @@
+
+
+
+
+ java programming style
+ -----------------------
+ 
+ 
+  => component   & container  style
+  
+  
+
+  
+  component ==> appln business logic
+  
+  container ==> infra-logic
+  
+  
+  -----------------------------------
+  
+  
+  how to describe ( configuration ) out components to containers?
+  
+  many ways
+  
+  -> XML doc
+  -> Annotation
+  
+  -------------------------------------
+  
+  ref : 
+  https://docs.oracle.com/javase/tutorial/java/annotations/
+  
+  --------------------------------------
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+ 
+ 
