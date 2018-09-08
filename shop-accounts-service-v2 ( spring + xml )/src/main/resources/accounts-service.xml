@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+
+	<bean id="dataSource"
+		class="org.apache.commons.dbcp.BasicDataSource">
+		<property name="driverClassName" value="" />
+		<property name="url" value="" />
+		<property name="username" value="" />
+		<property name="password" value="" />
+		<property name="maxActive" value="1" />
+	</bean>
+
+
+	<bean id="accountRepository"
+		class="com.shop.accounts.repository.JPAAccountRepository">
+		<property name="dataSource" ref="dataSource" />
+	</bean>
+
+	<bean id="txrService"
+		class="com.shop.accounts.service.TxrServiceImpl">
+		<constructor-arg ref="accountRepository" />
+	</bean>
+
+</beans>
